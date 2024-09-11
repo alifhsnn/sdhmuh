@@ -1,0 +1,1286 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>SD MUHAMMADIYAH 6 </title>
+<!-- 
+
+Known Template 
+
+
+
+
+
+
+http://www.templatemo.com/tm-516-known
+
+-->
+
+     <style>
+          .container {
+          width: 90%;
+          margin: 0 auto;
+          }
+
+          .about-info {
+          text-align: center;
+          font-size: 16px; /* Adjust the base text size as needed */
+          }
+
+          .about-info h2 {
+          text-align: center;
+          margin-bottom: 20px;
+          font-size: 28px; /* Adjust the h2 text size as needed */
+          }
+
+
+          figure {
+          display: inline-block;
+          width: 30%;
+          margin: 10px;
+          cursor: pointer;
+          transition: transform 0.3s;
+          }
+
+          figure:hover {
+          transform: scale(1);
+          }
+
+          figure span {
+          font-size: 40px;
+          display: block;
+          }
+
+          figcaption h3 {
+          font-size: 24px;
+          margin: 10px 0;
+          }
+
+          .content {
+          display: none;
+          text-align: left;
+          padding: 15px;
+          border: 2px solid green;
+          border-radius: 5px;
+          margin-top: 10px;
+          animation: fadeIn 0.5s;
+          }
+
+          @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+          }
+
+          .show {
+          display: block;
+          animation: fadeIn 0.5s;
+          }
+     </style>
+
+
+
+
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+
+     <!-- MAIN CSS -->
+      
+     <link rel="stylesheet" href="css/templatemo-style.css">
+
+</head>
+ <style>
+        body {
+            font-family: "Barlow Condensed", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+
+
+     /*------AUDIO-----*/
+
+
+        audio {
+    position: fixed; /* Position the audio player fixed */
+    bottom: 20px; /* Distance from the bottom of the viewport */
+    right: 20px; /* Distance from the right of the viewport */
+    width: 300px; /* Width of the audio player */
+    border-radius: 25px; /* Rounded corners */
+    border: 1px solid #ddd; /* Border color */
+    background: #2c3e50; /* Background color */
+    z-index: 9999; /* Ensure the audio player is on top of all other content */ 
+}
+
+        /* Custom styling for the audio controls */
+        audio::-webkit-media-controls-panel {
+            background-color: #34495e; /* Background color */
+            border-radius: 10px; /* Rounded corners */
+            border: 1px solid #ecf0f1; /* Border color */
+        }
+
+        audio::-webkit-media-controls-play-button,
+        audio::-webkit-media-controls-pause-button,
+        audio::-webkit-media-controls-mute-button {
+            color: #ecf0f1; /* Icon color */
+        }
+
+        audio::-webkit-media-controls-current-time-display,
+        audio::-webkit-media-controls-time-remaining-display {
+            color: #ecf0f1; /* Time display color */
+        }
+    </style>
+</head>
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Fixed Audio Player</title>
+     <style>
+         /* Posisi tetap di bawah kanan */
+         #audio-player {
+             position: fixed;
+             bottom: 0;  /* Jarak dari bagian bawah halaman */
+             right: 0;   /* Jarak dari sisi kanan halaman */
+             width: 20%; /* Lebar untuk desktop */
+         }
+ 
+         /* Responsif untuk perangkat mobile */
+         @media only screen and (max-width: 600px) {
+             #audio-player {
+                 margin-right: 100px;
+                 width: 50%;  /* Lebar penuh untuk layar kecil */
+                 height: 40px; /* Sesuaikan tinggi untuk layar kecil */
+             }
+         }
+     </style>
+ </head>
+ <body>
+     <audio id="audio-player" controls>
+         <source id="audio-source" src="audio/Sekolah Kreatif SD Muhammadiyah 6.mp3" type="audio/mpeg">
+         Your browser does not support the audio element.
+     </audio>
+ 
+     <script>
+         // Dapatkan elemen audio
+         const audioPlayer = document.getElementById('audio-player');
+ 
+         // Tambahkan event listener untuk mendeteksi tombol ditekan
+         document.addEventListener('keydown', function(event) {
+             // Cek jika tombol "M" ditekan
+             if (event.key === 'M' || event.key === 'm') {
+                 // Toggle mute/unmute audio
+                 audioPlayer.muted = !audioPlayer.muted;
+             }
+         });
+     </script>
+ </body>
+
+    <button onclick="playNext()">Play Next</button>
+    <button onclick="playPrevious()">Play Previous</button>
+
+    <script>
+        // Daftar file audio
+        var playlist = [
+            'audio/Sekolah Kreatif SD Muhammadiyah 6.mp3',
+            'audio/Bersama kita bersinar (2).mp3',
+            'audio/sang surya.mp3'
+        ];
+
+        var currentIndex = 0; // Index file audio yang sedang diputar
+
+        // Fungsi untuk memutar audio berikutnya
+        function playNext() {
+            currentIndex = (currentIndex + 1) % playlist.length; // Update index dan loop jika perlu
+            playAudio(playlist[currentIndex]);
+        }
+
+        // Fungsi untuk memutar audio sebelumnya
+        function playPrevious() {
+            currentIndex = (currentIndex - 1 + playlist.length) % playlist.length; // Update index dan loop jika perlu
+            playAudio(playlist[currentIndex]);
+        }
+
+        // Fungsi untuk memutar audio berdasarkan src
+        function playAudio(src) {
+            var audioPlayer = document.getElementById('audio-player');
+            var audioSource = document.getElementById('audio-source');
+            audioSource.src = src;
+            audioPlayer.load(); // Muat sumber baru
+            audioPlayer.play().catch(function(error) {
+                console.log("Autoplay failed:", error);
+            });
+        }
+
+        // Memutar audio pertama saat halaman dimuat
+        window.addEventListener('load', function() {
+            playAudio(playlist[currentIndex]);
+        });
+
+        // Memindahkan ke lagu berikutnya setelah selesai
+        document.getElementById('audio-player').addEventListener('ended', function() {
+            playNext();
+        });
+    </script>
+</body>
+
+ 
+ 
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+
+
+     <!-- HEADER -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+                    
+
+                    <!-- lOGO TEXT HERE -->
+
+                    <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
+                    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+                    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+                    <a href="#" class="navbar-brand">
+                    <img src="images/logo.jpg" alt="Logo" class="navbar-logo" style="width: 85px; height: auto;">
+                    <span class="navbar-text">
+                         <span class="text-large">SD MUHAMMADIYAH 6 SAMARINDA</span><br>
+                         <span class="text-medium">Generasi Muslim Berilmu Beramal & Cinta Lingkungan</span>
+                    </span>                       
+    </a>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-nav-first">
+                        <li><a href="#top" class="smoothScroll">Beranda</a></li>
+                        <li><a href="#ppdb" class="smoothScroll">PPDB</a></li>
+                        <li><a href="#team" class="smoothScroll">Profile</a></li>
+                        <li><a href="#about" class="smoothScroll">Visi Misi & Tujuan</a></li>
+                        <li><a href="#courses" class="smoothScroll">Fasilitas</a></li>
+                        <li><a href="#testimonial" class="smoothScroll">Galeri Kegiatan</a></li>
+                        <li><a href="#contact" class="smoothScroll">Kritik & Saran</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=sdmuhammadiyah6smd@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right clock-nav">
+                         <li><span id="date"></span> | <span id="clock"></span></li> <!-- Real-time clock -->
+                    </ul>
+               </div>
+          </div>
+     </section>
+     <!-- HOME -->
+     <section id="home">
+          <div class="row">
+              <div class="owl-carousel owl-theme home-slider">
+                  <div class="item item-first">
+                      <div class="caption">
+                          <div class="container">
+                              <div class="col-md-6 col-sm-12">
+                                  <h1>SD MUHAMMADIYAH 6 SAMARINDA</h1>
+                                  <h3>ANDA AKAN MENDAPATKAN INFORMASI SEPUTAR SEKOLAHAN PADA WEBSITE INI</h3>
+                                  <a href="#feature" class="section-btn home-btn btn btn-default smoothScroll">CLICK UNTUK MEMULAI</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item item-second">
+                      <div class="caption">
+                          <div class="container">
+                              <div class="col-md-6 col-sm-12">
+                                  <h1>DAFTARKAN ANAK KE SEKOLAH MUHAMMADIYAH</h1>
+                                  <h3>RUANGAN YANG MEMADAI</h3>
+                                  <a href="#courses" class="section-btn home-btn btn btn-default smoothScroll">Click Here</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item item-third">
+                      <div class="caption">
+                          <div class="container">
+                              <div class="col-md-6 col-sm-12">
+                                  <h1>SEKOLAH KREATIF <br>SD MUHAMMADIYAH 6 SAMARINDA</h1><br>
+                                  <h3>GEMILANG Generasi Muslim Berilmu Beramal dan Cinta Lingkungan</h3>
+                                  <a href="#contact" class="section-btn home-btn btn btn-default smoothScroll">Click Here</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>      
+     <!-- OVERLAY -->
+     <!-- PPDB -->
+     <section id="ppdb">
+          <div class="container">
+            <div class="row">
+              <!-- Kolom untuk Gambar -->
+              <div class="col-md-6">
+                <div class="image-highlight" style="position: relative;">
+                  <!-- Gambar untuk Desktop -->
+                  <img id="image-display-desktop" src="images/Ppdb-desktop.jpg" alt="Descriptive Text" class="img-fluid desktop-img">
+                  
+                  <!-- Gambar untuk Mobile -->
+                  <img id="image-display-mobile" src="images/Ppdb-mobile.jpg" alt="Descriptive Text" class="img-fluid mobile-img">
+        
+                  <!-- Button di atas gambar -->
+                  <a href="#your-link" class="section-btn btn btn-default smoothScroll">
+                    Click Here
+                </a>
+                </div>
+              </div>
+            </div>
+          </div>
+     </section>
+        
+        
+     <!--VIDEO HIGHLIGHT SEKOLAH-->
+      
+     <!-- PROFILE -->
+     <section id="feature">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="feature-thumb">
+                              <span>01</span>
+                              <h3>SEJARAH SEKOLAH</h3>
+                              <p>Berawal dari pimpinan cabang Muhammadiyah samarinda utara memperluas AUM dibidang pendidikan yang di prakarsai oleh kepala sekolah SD Muhammadiyah 4 Samarinda yang saat itu di pimpin oleh bapak Drs. H.Jarwadi, M.Si. </p>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="feature-thumb">
+                              <span>02</span>
+                              <h3>AKREDITASI B</h3>
+                              <p>SD Muhammadiyah 6 Samarinda Memiliki akreditasi Grade B dengan nilai 89 sejak tahun 2018.</p>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="feature-thumb">
+                              <span>03</span>
+                              <h3>KURIKULUM MERDEKA</h3>
+                              <p>Kurikulum Merdeka memberikan fleksibilitas kepada pendidik untuk menciptakan pembelajaran berkualitas sesuai kebutuhan dan lingkungan peserta didik.
+                                   Karakteristik Kurikulum Merdeka <br>
+                                   1.Pengembangan Soft Skills dan Karakter<br>
+                                   2.Fokus pada Materi Esensial<br>
+                                   3.Pembelajaran yang fleksibel <br></p>
+                              </p>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+    
+     <!-- Profile Kepala Sekolah, Staf Tu dan Guru -->
+     <section id="team">
+          <div class="container">
+              <div class="section-title">
+                  <h2>Profile Kepala Sekolah, Staf TU & Guru <small>Sekolah Dasar Muhammadiyah 6 Samarinda</small></h2>
+              </div>
+      
+              <div class="owl-carousel owl-theme">
+               <div class="item">
+                   <div class="team-thumb">
+                       <div class="team-image Saparwadi">
+                           <img src="images/Kepsek.jpg" class="img-responsive" alt="">
+                       </div>
+                       <div class="team-info">
+                           <h3>Saparwadi, S. Pd</h3>
+                           <span>Kepala Sekolah</span>
+                       </div>
+                       <ul class="social-icon">
+                           <li><a href="#" class="fa fa-facebook-square"></a></li>
+                           <li><a href="#" class="fa fa-twitter"></a></li>
+                           <li><a href="#" class="fa fa-instagram"></a></li>
+                       </ul>
+                   </div>
+               </div>
+      
+                  <div class="item">
+                      <div class="team-thumb">
+                          <div class="team-image Idawati">
+                              <img src="images/Bu Idawati.jpg" class="img-responsive" alt="">
+                          </div>
+                          <div class="team-info">
+                              <h3>Idawati, S. Pd</h3>
+                              <span>Waka Kurikulum</span>
+                          </div>
+                          <ul class="social-icon">
+                              <li><a href="#" class="fa fa-google"></a></li>
+                              <li><a href="#" class="fa fa-instagram"></a></li>
+                          </ul>
+                      </div>
+                  </div>
+      
+                  <div class="item">
+                      <div class="team-thumb">
+                          <div class="team-image Istiqomah">
+                              <img src="images/Bu Istiqomah.jpg" class="img-responsive" alt="">
+                          </div>
+                          <div class="team-info">
+                              <h3>Istiqomah, S.E</h3>
+                              <span>Kepala Tata Usaha</span>
+                          </div>
+                          <ul class="social-icon">
+                              <li><a href="#" class="fa fa-twitter"></a></li>
+                              <li><a href="#" class="fa fa-envelope-o"></a></li>
+                              <li><a href="#" class="fa fa-linkedin"></a></li>
+                          </ul>
+                      </div>
+                  </div>
+      
+                  <div class="item">
+                      <div class="team-thumb">
+                          <div class="team-image Sitti">
+                              <img src="images/Sitti Munjiyah Mardhatillah.jpg" class="img-responsive" alt="">
+                          </div>
+                          <div class="team-info">
+                              <h3>Sitti Munjiyah Mardhatillah</h3>
+                              <span>Tata Usaha</span>
+                          </div>
+                          <ul class="social-icon">
+                              <li><a href="#" class="fa fa-twitter"></a></li>
+                              <li><a href="#" class="fa fa-google"></a></li>
+                              <li><a href="#" class="fa fa-behance"></a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="item">
+                    <div class="team-thumb">
+                        <div class="team-image Fahreza">
+                            <img src="images/Muhammad Fahreza Hardika.jpg" class="img-responsive" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Muhammad Fahreza Hardika</h3>
+                            <span>Bendarahara</span>
+                        </div>
+                        <ul class="social-icon">
+                            <li><a href="#" class="fa fa-twitter"></a></li>
+                            <li><a href="#" class="fa fa-google"></a></li>
+                            <li><a href="#" class="fa fa-behance"></a></li>
+                        </ul>
+                    </div>
+                   </div>
+                  <div class="item">
+                      <div class="team-thumb">
+                          <div class="team-image Siti-asriyah">
+                            <img src="images/Bu Siti asriyah.jpg" class="img-responsive" alt="">
+                          </div>
+                          <div class="team-info">
+                            <h3>Siti Asriyah, S.Si</h3>
+                            <span>Guru Kelas</span>
+                          </div>
+                          <ul class="social-icon">
+                            <li><a href="#" class="fa fa-twitter"></a></li>
+                            <li><a href="#" class="fa fa-google"></a></li>
+                            <li><a href="#" class="fa fa-behance"></a></li>
+                          </ul>
+                          </div>
+                    </div>
+                    <div class="item">
+                         <div class="team-thumb">
+                             <div class="team-image Nur">
+                                 <img src="images/Nur Asri Indah Yani.jpg" class="img-responsive" alt="">
+                             </div>
+                             <div class="team-info">
+                                 <h3>Nur Asri Indah Yani, S.Pd</h3>
+                                 <span>Guru Kelas</span>
+                             </div>
+                             <ul class="social-icon">
+                                 <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                 <li><a href="#" class="fa fa-twitter"></a></li>
+                                 <li><a href="#" class="fa fa-instagram"></a></li>
+                             </ul>
+                         </div>
+                    </div>
+                    <div class="item">
+                         <div class="team-thumb">
+                             <div class="team-image Ina">
+                                 <img src="images/Ina Ruviyana.jpg" class="img-responsive" alt="">
+                             </div>
+                             <div class="team-info">
+                                 <h3>Ina Ruviyana, S.Pd</h3>
+                                 <span>Guru Kelas</span>
+                             </div>
+                             <ul class="social-icon">
+                                 <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                 <li><a href="#" class="fa fa-twitter"></a></li>
+                                 <li><a href="#" class="fa fa-instagram"></a></li>
+                             </ul>
+                         </div>
+                    </div>
+                    <div class="item">
+                         <div class="team-thumb">
+                             <div class="team-image Anggi">
+                                 <img src="images/Anggi Widyasari.jpg" class="img-responsive" alt="">
+                             </div>
+                             <div class="team-info">
+                                 <h3>Anggi Widyasari</h3>
+                                 <span>Guru Kelas</span>
+                             </div>
+                             <ul class="social-icon">
+                                 <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                 <li><a href="#" class="fa fa-twitter"></a></li>
+                                 <li><a href="#" class="fa fa-instagram"></a></li>
+                             </ul>
+                         </div>
+                    </div>
+                    <div class="item">
+                         <div class="team-thumb">
+                             <div class="team-image Lilik">
+                               <img src="images/Lilik Widayati.jpg" class="img-responsive" alt="">
+                             </div>
+                             <div class="team-info">
+                               <h3>Lilik Widayati S. Pd</h3>
+                               <span>Guru Kelas</span>
+                             </div>
+                             <ul class="social-icon">
+                               <li><a href="#" class="fa fa-twitter"></a></li>
+                               <li><a href="#" class="fa fa-google"></a></li>
+                               <li><a href="#" class="fa fa-behance"></a></li>
+                             </ul>
+                             </div>
+                       </div>
+                    <div class="item">
+                         <div class="team-thumb">
+                             <div class="team-image Ika">
+                               <img src="images/Ika Dian Purwanti.jpg" class="img-responsive" alt="">
+                             </div>
+                             <div class="team-info">
+                               <h3>Ika Dian Purwanti S. Psi</h3>
+                               <span>Guru Kelas</span>
+                             </div>
+                             <ul class="social-icon">
+                               <li><a href="#" class="fa fa-twitter"></a></li>
+                               <li><a href="#" class="fa fa-google"></a></li>
+                               <li><a href="#" class="fa fa-behance"></a></li>
+                             </ul>
+                             </div>
+                    </div>
+                    <div class="item">
+                         <div class="team-thumb">
+                             <div class="team-image Kusmiati">
+                               <img src="images/Tutut Kusmiati.jpg" class="img-responsive" alt="">
+                             </div>
+                             <div class="team-info">
+                               <h3>Tutut Kusmiati, S.Pd</h3>
+                               <span>Guru Kelas</span>
+                             </div>
+                             <ul class="social-icon">
+                               <li><a href="#" class="fa fa-twitter"></a></li>
+                               <li><a href="#" class="fa fa-google"></a></li>
+                               <li><a href="#" class="fa fa-behance"></a></li>
+                             </ul>
+                             </div>
+                    </div>
+                    <div class="item">
+                         <div class="team-thumb">
+                             <div class="team-image Sartika">
+                                 <img src="images/Sartika Sari.jpg" class="img-responsive" alt="">
+                             </div>
+                             <div class="team-info">
+                                 <h3>Sartika Sari, S.S</h3>
+                                 <span>Guru Mapel</span>
+                             </div>
+                             <ul class="social-icon">
+                                 <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                 <li><a href="#" class="fa fa-twitter"></a></li>
+                                 <li><a href="#" class="fa fa-instagram"></a></li>
+                             </ul>
+                         </div>
+                    </div>
+                    <div class="item">
+                        <div class="team-thumb">
+                            <div class="team-image Elliana">
+                                <img src="images/Elliana Puspita Sari.jpg" class="img-responsive" alt="">
+                            </div>
+                            <div class="team-info">
+                                <h3>Elliana Puspita Sari</h3>
+                                <span>Guru Mapel</span>
+                            </div>
+                            <ul class="social-icon">
+                                <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-instagram"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item">
+                         <div class="team-thumb">
+                             <div class="team-image Machmuda">
+                                 <img src="images/Machmuda Aghisna.jpg" class="img-responsive" alt="">
+                             </div>
+                             <div class="team-info">
+                                 <h3>Machmuda Aghisna</h3>
+                                 <span>Guru Mapel</span>
+                             </div>
+                             <ul class="social-icon">
+                                 <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                 <li><a href="#" class="fa fa-twitter"></a></li>
+                                 <li><a href="#" class="fa fa-instagram"></a></li>
+                             </ul>
+                         </div>
+                    </div>
+                    <div class="item">
+                         <div class="team-thumb">
+                             <div class="team-image Abdul">
+                                 <img src="images/Abdul Muis.jpg" class="img-responsive" alt="">
+                             </div>
+                             <div class="team-info">
+                                 <h3>Abdul Muis S.Pd</h3>
+                                 <span>Guru Mapel</span>
+                             </div>
+                             <ul class="social-icon">
+                                 <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                 <li><a href="#" class="fa fa-twitter"></a></li>
+                                 <li><a href="#" class="fa fa-instagram"></a></li>
+                             </ul>
+                         </div>
+                    </div>
+                    
+              </div>
+          </div>
+      </section>
+      
+     <!-- APA YANG DISEDIAKAN SAMA SEKOLAHAN -->
+     <section id="about">
+          <div class="container">
+              <div class="about-info">
+                  <h2>VISI, MISI, dan Tujuan</h2>
+                  <figure onclick="toggleContent('visi-content')">
+                      <span><i class="fa fa-users"></i></span>
+                      <figcaption>
+                          <h3>Visi</h3>
+                          <p>Visi Sekolah Dasar Muhammadiyah 6 Samarinda</p>
+                      </figcaption>
+                      <div id="visi-content" class="content">
+                          <p>
+                              SD Muhammadiyah 6 Samarinda adalah "Mewujudkan Generasi Muslim yang Berilmu, Beramal, Cinta Lingkungan, Kreatif, dan Berprofil Pancasila."<br>
+                              Indikator Visi:<br>
+                              Peserta didik yang taqwa dan mengamalkan ajaran agama dalam kehidupan sehari-hari.
+                              Peserta didik yang mampu melaksanakan ibadah sesuai tuntunan Nabi.
+                              Peserta didik berprestasi akademik, lulus dengan standar maksimal, dan diterima di sekolah favorit.
+                              Peserta didik cerdas dan berprestasi di bidang akademik dan non-akademik.
+                              Peserta didik yang mandiri, percaya diri, dan kreatif.
+                              Lingkungan sekolah yang bersih, sehat, teduh, rapi, aman, dan nyaman.
+                              Visi ini menjadi panduan jangka panjang, menengah, dan pendek, serta menjiwai seluruh warga sekolah dalam mencapai tujuan yang berkelanjutan.
+                          </p>
+                      </div>
+                  </figure>
+  
+                  <figure onclick="toggleContent('misi-content')">
+                      <span><i class="fa fa-certificate"></i></span>
+                      <figcaption>
+                          <h3>Misi</h3>
+                          <p>MISI Sekolah Dasar Muhammadiyah 6 Samarinda</p>
+                      </figcaption>
+                      <div id="misi-content" class="content">
+                          <p>
+                              Mewujudkan lulusan yang beriman, bertaqwa, dan beradab Islami.
+                              Menghasilkan lulusan yang menjalankan ajaran agama sesuai Al-Quran dan As-Sunnah.
+                              Menumbuhkan karakter warga sekolah yang cerdas, disiplin, dan cinta tanah air.
+                              Mengembangkan pembelajaran yang aktif, kreatif, dan inovatif dengan memanfaatkan IPTEK.
+                              Mendorong semangat berprestasi dan kompetensi untuk menghadapi persaingan global.
+                              Menciptakan lingkungan sekolah yang sehat, bersih, hijau, dan asri. 
+                          </p>
+                      </div>
+                  </figure>
+  
+                  <figure onclick="toggleContent('tujuan-content')">
+                      <span><i class="fa fa-bar-chart-o"></i></span>
+                      <figcaption>
+                          <h3>Tujuan</h3>
+                          <p> Tujuan Sekolah Dasar Muhammadiyah 6 Samarinda</p>
+                      </figcaption>
+                      <div id="tujuan-content" class="content">
+                          <p>
+                              a. Agar siswa taat beribadah sesuai dengan Al-quran dan As-Sunnah baik disekolah maupun dirumah (Kontrol Ibadah)
+                              <br>
+                              b. Terbentuknya sikap yang baik, sopan dan berkarakter.
+                              <br>
+                              c. Terwujudnya siswa berprestasi baik akademik maupun non akademik.
+                              <br>
+                              d. Terciptanya suasana pembelajaran aktif, inofatif, kreatif, efektif dan menyenangkan.
+                              <br>
+                              e. Terciptanya rasa aman dan nyaman dilingkungan sekolah.
+                              <br>
+                              f. Terwujudnya sikap peduli terhadap kebersihan lingkungan.
+                              <br>
+                              g. Terwujudnya peserta didik selalu mengamalkan nilai nilai Pancasila.
+                              <br>
+                              h. Terwujudnya lingkungan yang bersih, sehat, teduh, rapi, aman dan nyaman
+                          </p>
+                      </div>
+                  </figure>
+              </div>
+          </div>
+      </section>
+  
+      <script>
+          function toggleContent(contentId) {
+              var content = document.getElementById(contentId);
+              content.classList.toggle('show');
+          }
+  
+          // Initialize all content as hidden
+          document.querySelectorAll('.content').forEach(function(content) {
+              content.style.display = 'none';
+          });
+      </script></body>
+                               </html>
+
+               </div>
+          </div>
+     </section>
+     </body> 
+     <!-- Fasilitas -->
+     <section id="courses">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>Fasilitas <small>Sekolah Dasar Muhammadiyah 6 Samarinda</small></h2>
+                         </div>
+
+                         <div class="owl-carousel owl-theme owl-courses">
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="courses-thumb">
+                                             <div class="courses-top">
+                                                  <div class="courses-image">
+                                                       <img src="images/courses-image1.jpg" class="img-responsive" alt="">
+                                                  </div>
+                                                  <div class="courses-date">
+                                                       <span><i class="fa fa-calendar"></i> 12 / 7 / 2018</span>
+                                                       <span><i class="fa fa-clock-o"></i> 7 Hours</span>
+                                                  </div>
+                                             </div>
+
+                                             <div class="courses-detail">
+                                                  <h3><a href="#"></a></h3>
+                                                  <p>.</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="courses-thumb">
+                                             <div class="courses-top">
+                                                  <div class="courses-image">
+                                                       <img src="images/courses-image2.jpg" class="img-responsive" alt="">
+                                                  </div>
+                                                  <div class="courses-date">
+                                                       <span><i class="fa fa-calendar"></i> 20 / 7 / 2018</span>
+                                                       <span><i class="fa fa-clock-o"></i> 4.5 Hours</span>
+                                                  </div>
+                                             </div>
+
+                                             <div class="courses-detail">
+                                                  <h3><a href="#">Graphic & Web Design</a></h3>
+                                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="courses-thumb">
+                                             <div class="courses-top">
+                                                  <div class="courses-image">
+                                                       <img src="images/courses-image3.jpg" class="img-responsive" alt="">
+                                                  </div>
+                                                  <div class="courses-date">
+                                                       <span><i class="fa fa-calendar"></i> 15 / 8 / 2018</span>
+                                                       <span><i class="fa fa-clock-o"></i> 6 Hours</span>
+                                                  </div>
+                                             </div>
+
+                                             <div class="courses-detail">
+                                                  <h3><a href="#">Marketing Communication</a></h3>
+                                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="courses-thumb">
+                                             <div class="courses-top">
+                                                  <div class="courses-image">
+                                                       <img src="images/courses-image4.jpg" class="img-responsive" alt="">
+                                                  </div>
+                                                  <div class="courses-date">
+                                                       <span><i class="fa fa-calendar"></i> 10 / 8 / 2018</span>
+                                                       <span><i class="fa fa-clock-o"></i> 8 Hours</span>
+                                                  </div>
+                                             </div>
+
+                                             <div class="courses-detail">
+                                                  <h3><a href="#">Summer Kids</a></h3>
+                                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="courses-thumb">
+                                             <div class="courses-top">
+                                                  <div class="courses-image">images/courses-image5.jpg
+                                                       <img src="" class="img-responsive" alt="">
+                                                  </div>
+                                                  <div class="courses-date">
+                                                       <span><i class="fa fa-calendar"></i> 5 / 10 / 2018</span>
+                                                       <span><i class="fa fa-clock-o"></i> 10 Hours</span>
+                                                  </div>
+                                             </div>
+
+                                             <div class="courses-detail">
+                                                  <h3><a href="#">Business &amp; Management</a></h3>
+                                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                         </div>
+
+               </div>
+          </div>
+     </section>
+     <!--PRESTASI-->
+     <section id="courses">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>Prestasi Sekolah <small>Sekolah Dasar Muhammadiyah 6 Samarinda</small></h2>
+                         </div>
+
+                         <div class="owl-carousel owl-theme owl-courses">
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="courses-thumb">
+                                             <div class="courses-top">
+                                                  <div class="courses-image">
+                                                       <img src="images/bang aiko.jpg" class="img-responsive" alt="">
+                                                  </div>
+                                                  <div class="team-info">
+                                                       <h3>Aiko</h3>
+                                                       <span>Juara 1 Sepak Bola Piala Bupati</span>
+                                                     </div>
+                                             </div>
+
+                                             <div class="courses-detail">
+                                                  <h3><a href="#"></a></h3>
+                                                  <p>.</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="courses-thumb">
+                                             <div class="courses-top">
+                                                  <div class="courses-image">
+                                                       <img src="images/courses-image2.jpg" class="img-responsive" alt="">
+                                                  </div>
+                                                  <div class="courses-date">
+                                                       <span><i class="fa fa-calendar"></i> 20 / 7 / 2018</span>
+                                                       <span><i class="fa fa-clock-o"></i> 4.5 Hours</span>
+                                                  </div>
+                                             </div>
+
+                                             <div class="courses-detail">
+                                                  <h3><a href="#">Graphic & Web Design</a></h3>
+                                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="courses-thumb">
+                                             <div class="courses-top">
+                                                  <div class="courses-image">
+                                                       <img src="images/courses-image3.jpg" class="img-responsive" alt="">
+                                                  </div>
+                                                  <div class="courses-date">
+                                                       <span><i class="fa fa-calendar"></i> 15 / 8 / 2018</span>
+                                                       <span><i class="fa fa-clock-o"></i> 6 Hours</span>
+                                                  </div>
+                                             </div>
+
+                                             <div class="courses-detail">
+                                                  <h3><a href="#">Marketing Communication</a></h3>
+                                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="courses-thumb">
+                                             <div class="courses-top">
+                                                  <div class="courses-image">
+                                                       <img src="images/courses-image4.jpg" class="img-responsive" alt="">
+                                                  </div>
+                                                  <div class="courses-date">
+                                                       <span><i class="fa fa-calendar"></i> 10 / 8 / 2018</span>
+                                                       <span><i class="fa fa-clock-o"></i> 8 Hours</span>
+                                                  </div>
+                                             </div>
+
+                                             <div class="courses-detail">
+                                                  <h3><a href="#">Summer Kids</a></h3>
+                                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="courses-thumb">
+                                             <div class="courses-top">
+                                                  <div class="courses-image">
+                                                       <img src="images/courses-image5.jpg" class="img-responsive" alt="">
+                                                  </div>
+                                                  <div class="courses-date">
+                                                       <span><i class="fa fa-calendar"></i> 5 / 10 / 2018</span>
+                                                       <span><i class="fa fa-clock-o"></i> 10 Hours</span>
+                                                  </div>
+                                             </div>
+
+                                             <div class="courses-detail">
+                                                  <h3><a href="#">Business &amp; Management</a></h3>
+                                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                         </div>
+                    </div>     
+               </div>
+          </div>
+     </section>
+     <!-- TESTIMONIAL -->
+     <section id="testimonial">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>GALERI KEGIATAN<small>Sekolah Dasar Muhammadiyah 6 Samarinda</small></h2>
+                         </div>
+                         <div class="owl-carousel owl-theme owl-courses">
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="courses-thumb">
+                                             <div class="courses-top">
+                                                  <div class="courses-image">
+                                                       <img src="images/courses-image1.jpg" class="img-responsive" alt="">
+                                                  </div>
+                                                  <div class="courses-date">
+                                                       <span><i class="fa fa-calendar"></i> 12 / 7 / 2018</span>
+                                                       <span><i class="fa fa-clock-o"></i> 7 Hours</span>
+                                                  </div>
+                                             </div>
+
+                                             <div class="courses-detail">
+                                                  <h3><a href="#"></a></h3>
+                                                  <p>.</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="courses-thumb">
+                                             <div class="courses-top">
+                                                  <div class="courses-image">
+                                                       <img src="images/courses-image2.jpg" class="img-responsive" alt="">
+                                                  </div>
+                                                  <div class="courses-date">
+                                                       <span><i class="fa fa-calendar"></i> 20 / 7 / 2018</span>
+                                                       <span><i class="fa fa-clock-o"></i> 4.5 Hours</span>
+                                                  </div>
+                                             </div>
+
+                                             <div class="courses-detail">
+                                                  <h3><a href="#">Graphic & Web Design</a></h3>
+                                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="courses-thumb">
+                                             <div class="courses-top">
+                                                  <div class="courses-image">
+                                                       <img src="images/1723688608717 (1).jpg" class="img-responsive" alt="">
+                                                  </div>
+                                             </div>
+
+                                             <div class="courses-detail">
+                                                  <h3><a href="#">Lomba Adzan</a></h3>
+                                                  <p></p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="courses-thumb">
+                                             <div class="courses-top">
+                                                  <div class="courses-image">
+                                                       <img src="images/1723688608305.jpg" class="img-responsive" alt="">
+                                                  </div>
+                                             </div>
+
+                                             <div class="courses-detail">
+                                                  <h3><a href="#">Lomba Kaligrafi</a></h3>
+                                                  <p>Lomba ini bertujuan untuk memperingati Hari Merdeka yang ke-79.</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="courses-thumb">
+                                             <div class="courses-top">
+                                                  <div class="courses-image">
+                                                       <img src="images/1723688608082.jpg" class="img-responsive" alt="">
+                                                  </div>
+                                             <div class="courses-detail">
+                                                  <h3><a href="#">Lomba Estafet Kardus</a></h3>
+                                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              
+                              
+                         </div>
+                    
+               </div>
+          </div>
+     </section> 
+
+
+     <!-- Youtube -->
+     <section id="contact">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                <form id="contact-form" role="form" action="" method="post">
+                  <div class="section-title">
+                    <h2>Kritik dan Saran <small>we love conversations. let us talk!</small></h2>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <input type="text" class="form-control" placeholder="Enter full name" name="name" required="">
+                    <input type="email" class="form-control" placeholder="Enter email address" name="email" required="">
+                    <textarea class="form-control" rows="6" placeholder="Tell us about your message" name="message" required=""></textarea>
+                  </div>
+                  <div class="col-md-4 col-sm-12">
+                    <input type="submit" class="form-control" name="send message" value="Send Message">
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <div class="video-highlight">
+                  <!-- Hanya satu elemen div dengan ID yang sesuai -->
+                  <div id="video-player"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>               
+        <!--VIDEO HIGHLIGHT YOUTUBE-->   
+        <script src="https://www.youtube.com/iframe_api"></script>
+        <script>
+          var videoIds = ['XRXYKDB2rPg', 'h7MYJghRWt0', 'yetAnotherVideoId']; // Ganti dengan ID video Anda
+          var currentVideoIndex = 0; // Mulai dari video pertama
+          var player;
+        
+          // Fungsi ini dipanggil ketika YouTube IFrame API siap
+          function onYouTubeIframeAPIReady() {
+            player = new YT.Player('video-player', {
+              height: '315',
+              width: '100%',
+              videoId: videoIds[currentVideoIndex],
+              events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+              }
+            });
+          }
+        
+          function onPlayerReady(event) {
+            event.target.playVideo();
+          }
+        
+          function onPlayerStateChange(event) {
+            // Jika video selesai diputar (status 0)
+            if (event.data === YT.PlayerState.ENDED) {
+              currentVideoIndex = (currentVideoIndex + 1) % videoIds.length; // Pindah ke video berikutnya dan loop kembali ke awal
+              player.loadVideoById(videoIds[currentVideoIndex]);
+            }
+          }
+        </script>
+<!--VIDEO HIGHLIGHT YOUTUBE-->   
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+  var videoIds = ['XRXYKDB2rPg', 'h7MYJghRWt0', 'yetAnotherVideoId']; // Ganti dengan ID video Anda
+  var currentVideoIndex = 0; // Mulai dari video pertama
+  var player;
+
+  // Fungsi ini dipanggil ketika YouTube IFrame API siap
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('video-player', {
+      height: '315',
+      width: '100%',
+      videoId: videoIds[currentVideoIndex],
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  }
+
+  function onPlayerReady(event) {
+    event.target.playVideo();
+  }
+
+  function onPlayerStateChange(event) {
+    // Jika video selesai diputar (status 0)
+    if (event.data === YT.PlayerState.ENDED) {
+      currentVideoIndex = (currentVideoIndex + 1) % videoIds.length; // Pindah ke video berikutnya dan loop kembali ke awal
+      player.loadVideoById(videoIds[currentVideoIndex]);
+    }
+  }
+</script>
+     <footer id="footer">
+          <div class="container">
+              <div class="row">
+      
+                  <div class="col-md-4 col-sm-6">
+                      <div class="footer-info">
+                          <div class="section-title">
+                              <h2>ALAMAT</h2>
+                              <div class="team-info"></div>
+                          </div>
+                          <address>
+                              <p>Jl. Magelang, RT.19, Kel. Lempake, Kec. Samarinda Utara, Kota Samarinda, Prov. Kalimantan Timur<br> 
+                              Kode Pos. 75112</p>
+                          </address>
+      
+                          <ul class="social-icon">
+                              <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                              <li><a href="#" class="fa fa-twitter"></a></li>
+                              <li><a href="#" class="fa fa-instagram"></a></li>
+                          </ul>
+                      </div>
+                  </div>
+      
+                  <div class="col-md-4 col-sm-6">
+                      <div class="footer-info">
+                          <div class="section-title">
+                              <h2>Contact Info</h2>
+                          </div>
+                          <address>
+                              <p>081254734412</p>
+                              <p><a href="mailto:sdmuhammadiyah6smd@gmail.com">sdmuhammadiyah6smd@gmail.com</a></p>
+                          </address>
+      
+                          <div class="footer_menu">
+                              <h2>Quick Links</h2>
+                              <ul>
+                                  <li><a href="#">Career</a></li>
+                                  <li><a href="#">Investor</a></li>
+                                  <li><a href="#">Terms & Conditions</a></li>
+                                  <li><a href="#">Refund Policy</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+      
+                  <div class="col-md-4 col-sm-12">
+                      <div class="footer-info newsletter-form">
+                          <div class="section-title">
+                              <h2>Newsletter Signup</h2>
+                          </div>
+                          <div>
+                              <div class="form-group">
+                                  <form action="#" method="get">
+                                      <input type="email" class="form-control" placeholder="Enter your email" name="email" id="email" required="">
+                                      <input type="submit" class="form-control" name="submit" id="form-submit" value="Send me">
+                                  </form>
+                                  <span><sup>*</sup> Please note - we do not spam your email.</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+      
+              </div>
+          </div>
+      </footer>
+      
+
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
+
+</body>
+</html>
